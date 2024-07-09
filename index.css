@@ -1,0 +1,95 @@
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: center; /* Mengatur agar konten berada di tengah layar */
+    height: 100vh; /* Memastikan konten mengisi tinggi layar penuh */
+    background-image: url(wm.JPEG);
+    background-size: cover;
+}
+
+header {
+    text-align: right;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    font-size: 10px;
+    font-family: sans-serif;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-family: sans-serif;
+}
+
+nav ul li a:hover {
+    color: gray;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    margin-top: 9px;
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    opacity: 0; /* Mulai dengan opacity 0 untuk teks tidak terlihat */
+    animation: fadeIn 2s forwards; /* Terapkan animasi fadeIn selama 2 detik */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animasi untuk munculnya huruf satu per satu */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+
+
+/* Teks yang akan muncul satu per satu */
+.container h1 {
+    overflow: hidden; /* Membuat teks terpotong */
+
+    white-space: nowrap; /* Mengatur agar teks tidak melintasi baris */
+    margin: 0 auto; /* Mengatur posisi teks ke tengah */
+    letter-spacing: .15em; /* Spasi antar huruf */
+    animation: typing 3s steps(40, end), /* Mengatur durasi animasi */
+               blink-caret .75s step-end infinite; /* Animasi kursor */
+}
+
+
+main {
+    flex: 1;
+}

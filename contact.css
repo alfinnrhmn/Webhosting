@@ -1,0 +1,104 @@
+/* Reset default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    line-height: 1.6;
+    background-image: url(wmabout2.JPEG);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-right-nav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.top-right-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.top-right-nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.top-right-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.top-right-nav a:hover {
+    color: gray;
+}
+
+.container {
+    width: 80%;
+    margin-top: 80px; /* Sesuaikan dengan tinggi navigasi */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Memulai konten dari atas */
+}
+
+.content {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.8); /* Ubah opasitas background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+.content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+}
+
+.about-image {
+    margin-right: 20px; /* Jarak antara foto dan konten utama */
+    margin-left: 20px; /* Jarak dari sisi kiri */
+    width: 200px; /* Lebar tetap foto */
+    height: 800px; /* Tinggi tetap foto */
+    overflow: hidden; /* Mengatasi potongan gambar */
+}
+
+.about-image img {
+    width: 100%; /* Ukuran foto mengikuti lebar parent */
+    height: 49%; /* Tinggi otomatis sesuai proporsi */
+    object-fit: cover; /* Menjaga aspek gambar */
+    border-radius: 20px; /* Membuat sudut gambar menjadi melengkung */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Bayangan halus */
+}
+.contact-images {
+    display: flex;
+    align-items: center;
+}

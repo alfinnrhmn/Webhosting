@@ -1,0 +1,110 @@
+body {
+    background-color: rgb(75, 40, 40); /* Warna latar belakang */
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center; /* Mengatur agar konten berada di tengah secara horizontal */
+    align-items: center; /* Mengatur agar konten berada di tengah secara vertikal */
+    min-height: 100vh; /* Memastikan konten mengisi tinggi layar penuh */
+    background-image: url(wmabout2.JPEG);
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 960px; /* Mengatur lebar maksimum container */
+    width: 100%;
+    padding: 0 20px; /* Padding horizontal agar tidak terlalu dekat dengan tepi layar */
+}
+
+.top-right-nav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+.top-right-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.top-right-nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.top-right-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.top-right-nav a:hover {
+    color: gray;
+}
+
+.videos {
+    display: flex;
+    justify-content: space-between; /* Menyebarkan video secara merata */
+    width: 100%; /* Mengisi lebar container */
+    margin-top: 20px; /* Jarak antara setiap video */
+}
+
+.video {
+    position: relative; /* Membuat posisi video relatif untuk transisi */
+    width: 300px; /* Mengatur lebar video */
+    padding: 20px;
+    border-radius: 8px;
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Efek bayangan untuk video */
+    overflow: hidden; /* Menghilangkan overflow untuk memastikan tidak ada latar belakang video */
+    transition: transform 0.2s ease-in-out; /* Transisi untuk efek perubahan ukuran */
+}
+
+.video:hover {
+    transform: scale(1.05); /* Memperbesar video saat cursor mengarahkan */
+}
+
+.video iframe {
+    width: 100%; /* Mengisi lebar iframe agar responsif */
+    height: 169px;
+    border: none; /* Menghilangkan border iframe */
+}
+
+.video-info {
+    display: none; /* Sembunyikan*/
+    .title,
+    .description {
+        opacity: 0; /* Awalnya sembunyikan dengan opacity 0 */
+        animation: fadeIn 5s ease forwards; /* Animasi fadeIn selama 1 detik */
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0; /* Mulai dengan opacity 0 */
+        }
+        to {
+            opacity: 1; /* Berakhir dengan opacity 1 */
+        }
+    }
+}
+.centered-info {
+    opacity: 0; /* Awalnya sembunyikan dengan opacity 0 */
+    animation: fadeIn 1s ease forwards; /* Animasi fadeIn selama 1 detik */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Mulai dengan opacity 0 */
+    }
+    to {
+        opacity: 1; /* Berakhir dengan opacity 1 */
+    }
+}
